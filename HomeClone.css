@@ -1,0 +1,989 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-btwn {
+    justify-content: space-between;
+}
+
+.aligncenter {
+    align-items: center;
+}
+
+.gap {
+    gap: 20px;
+}
+
+.grid {
+    display: grid;
+}
+
+/* HEADER  */
+.leftImg,
+.rightImg {
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.leftImg {
+    left: 0;
+    top: 0;
+}
+
+.rightImg {
+    right: 0;
+    top: 0;
+}
+
+header {
+    background: #F2F2F2;
+    opacity: 0.99;
+    /* padding: 15px 0; */
+}
+
+header ul li a {
+    color: #92918F;
+}
+
+header ul li {
+    padding: 15px 12px;
+    border-left: 1px solid #92918F;
+    transition: 0.5s;
+}
+
+header ul li:hover {
+    background: #209D2F;
+}
+
+header ul li:hover a {
+    color: white;
+}
+
+.instagram {
+    border-right: 1px solid #92918F;
+}
+
+.left-side {
+    /* padding: 16px 0; */
+    color: #5E5B5B;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Logo  */
+.logoSection {
+    padding: 20px 0;
+}
+
+.logoSection img {
+    width: 223px;
+}
+
+.iconsDiv {
+    gap: 40px;
+}
+
+.iconsDiv i {
+    font-size: 34px;
+    /* grid-row: 1/3; */
+}
+
+.iconsDiv p {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.iconsDiv a {
+    font-size: 14px;
+    color: #5E5B5B;
+    text-decoration: none;
+}
+
+.icon i {
+    color: #209D2F;
+}
+
+.icon p {
+    color: #222222;
+}
+
+.icon {
+    /* gap: 20px; */
+    /* grid-template-columns: 1fr 1fr; */
+}
+
+/* .loctionDiv {
+border-left: 1px solid #92918F;
+} */
+.line {
+    background: #DDDDDD;
+    height: 50px;
+    width: 1px;
+}
+
+.button {
+    text-transform: uppercase;
+    /* font-size: 50px; */
+    font-weight: 500px;
+    padding: 18px 30px;
+    background: #209D2F;
+    border-radius: 40px;
+    justify-content: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.button a {
+    color: white;
+    letter-spacing: 2px;
+    z-index: 100;
+}
+
+.button::after {
+    content: '';
+    height: 0%;
+    width: 0%;
+    /* border-radius: 0 20% 90% 50%; */
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: black;
+    transition: 0.5s;
+}
+
+.button:hover::after {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+}
+
+/* Nav  */
+.leftList li:first-child a {
+    color: #209D2F;
+}
+
+.leftList li {
+    padding: 5px 20px;
+    border-right: 1px solid #DDDDDD;
+}
+
+.leftList li:last-child {
+    border: none;
+}
+
+.leftList li a {
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+}
+
+.leftList li a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    border-bottom: 2px solid #209D2F;
+    bottom: -14px;
+    left: 0;
+    transition: 0.5s;
+}
+
+.leftList li:first-child a::after {
+    width: 100%;
+}
+
+.leftList li a:hover::after {
+    width: 100%;
+}
+
+.rightIcon {
+    font-size: 22px;
+}
+
+.rightIcon .search {
+    padding-right: 30px;
+}
+
+.rightIcon .cart {
+    position: relative;
+}
+
+.rightIcon .cart span {
+    position: absolute;
+    background: #209D2F;
+    font-size: 10px;
+    color: white;
+    padding: 5px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -8px;
+    right: -12px;
+}
+
+.navContainer {
+    box-shadow: 0px -3px 9.55px 2px rgba(106, 106, 106, 0.1);
+    padding: 10px 0;
+}
+
+.listUl {
+    flex-wrap: wrap;
+    gap: 20px 0;
+    position: absolute;
+    z-index: 100;
+    width: 1100px;
+    background: white;
+    padding: 20px;
+    display: none;
+    transition: 0.5s;
+    /* left: 50%;
+    transform: translateX(-50%); */
+}
+
+.listUl img {
+    height: 100px;
+    width: 220px;
+    object-fit: cover;
+
+}
+
+.nestList {
+    position: relative;
+}
+
+.nestList:hover .listUl {
+    display: flex;
+}
+
+.nestList ul li {
+    border: none;
+    position: relative;
+}
+
+/* HERO */
+.heroSection {
+    position: relative;
+    /* background: red; */
+}
+
+.heroDiv img {
+    object-fit: cover;
+    width: 100%;
+    height: 900px;
+    position: relative;
+}
+
+.heroDiv::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('https://bracketweb.com/garlon-laravel/assets/images/shapes/hero-shape-1-1.png');
+    opacity: 0.97;
+}
+
+.iconContainer {
+    position: relative;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.iconContainer img {
+    position: absolute;
+    top: -30px;
+    left: -5px;
+    height: 50px;
+    z-index: 1;
+}
+
+.iconContainer i {
+    color: #209D2F;
+    background: white;
+    font-size: 30px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.iconContainer i::after {
+    content: '';
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border: 1px dashed #209D2F;
+    border-radius: 50%;
+    animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.iconContainer h5 {
+    color: #209D2F;
+    font-size: 24px;
+}
+
+.texts {
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    color: white;
+}
+
+.texts h2 {
+    font-size: 50px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.texts p {
+    padding: 20px 0;
+}
+
+.texts a {
+    text-transform: uppercase;
+    /* font-size: 50px; */
+    font-weight: 500px;
+    padding: 18px 30px;
+    background: #209D2F;
+    border-radius: 40px;
+    justify-content: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.texts a::after {
+    content: '';
+    height: 0%;
+    width: 0%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: black;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.texts a:hover::after {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+
+}
+
+.buttonDiv {
+    gap: 40px;
+    /* background: red; */
+    /* position: relative; */
+}
+
+.buttonDiv a,
+.buttonDiv img {
+    margin-top: -60px;
+    /* position: absolute; */
+    /* top: 20px; */
+}
+
+.buttonDiv img,
+.leafImg {
+    position: relative;
+    animation: position 1s linear alternate infinite;
+}
+
+.leafImg {
+    /* height: 100px; */
+    margin-top: -10px;
+}
+
+@keyframes position {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 3%;
+    }
+}
+
+/* <!-- BOXES --> */
+.aboutSection {
+    padding: 20px 0;
+    position: relative;
+}
+
+.boxes {
+    color: white;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -100%;
+}
+
+.boxes h4 a {
+    color: #222222;
+}
+
+.boxes p {
+    color: #5E5B5B;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.box h4 {
+    padding-top: 20px;
+    font-weight: 700;
+}
+
+.box p {
+    padding: 15px;
+}
+
+.boxes .box {
+    background: #F2F2F2;
+    /* padding: 25px 10px; */
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.secondBox .box::after {
+    display: none;
+}
+
+.boxes .box::after {
+    content: '';
+    position: absolute;
+    background-image: url('https://bracketweb.com/garlon-laravel/assets/images/shapes/shape-footer3.png');
+    width: 100%;
+    height: 30px;
+    top: 0;
+    left: 0;
+    transform: rotateX(180deg);
+    opacity: 0.4;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.wrapperDiv:hover .box:after {
+    display: none;
+}
+
+.boxes .icoDiv {
+    text-align: center;
+    position: relative;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.topIcoDiv {
+    position: relative;
+    top: -1000%;
+    transition: 0.5s;
+    /* background: red; */
+    display: none;
+    opacity: 0;
+}
+
+.wrapperDiv:hover .topIcoDiv {
+    height: 70px;
+    display: block;
+    opacity: 1;
+}
+
+
+.boxes i {
+    font-size: 30px;
+    z-index: 2;
+    /* position: relative;
+    top: 50%;
+    transform: translateY(-50%); */
+}
+
+.boxes .icoDiv::after,
+.boxes .icoDiv::before,
+.box .topIcoDiv::after,
+.box .topIcoDiv::before {
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 40px 40px;
+    transition: 0.5s;
+}
+
+.boxes .icoDiv::after {
+    background: #222222;
+}
+
+.boxes .icoDiv::before {
+    background: #209D2F;
+    top: 5px;
+}
+
+.secondBox .box .icoDiv::after,
+.box .topIcoDiv::after {
+    background: #209D2F;
+    /* z-index: 1; */
+}
+
+.secondBox .box .icoDiv::before,
+.box .topIcoDiv::before {
+    background: #222222;
+    top: 5px;
+    /* z-index: -1; */
+}
+
+.box .topIcoDiv::before {
+    top: 5px;
+}
+
+.wrapperDiv {
+    transition: 0.5s;
+}
+
+.wrapperDiv:hover .icoDiv {
+    display: none;
+}
+
+.secondBox .box {
+    background: white;
+    filter: drop-shadow(0px 2px 12.3px rgba(0, 0, 0, 0.1));
+    position: relative;
+
+}
+
+
+.topIcoDiv a {
+    color: red;
+    z-index: 10000;
+}
+
+.box h4 {
+    padding-top: 45px;
+
+}
+
+.box h4 a {
+    position: relative;
+}
+
+.box h4 a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #209D2F;
+    left: 0;
+    bottom: -10px;
+}
+
+/* .secondBox .box::after {
+    display: none;
+} */
+
+.box::before {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    background-image: url('https://bracketweb.com/garlon-laravel/assets/images/shapes/shape-footer3.png');
+    bottom: 0;
+    left: 0;
+}
+
+.wrapperDiv .box::before {
+    display: none;
+}
+
+.wrapperDiv:hover .box::before {
+    display: block;
+}
+
+.secondBox .box,
+.wrapperDiv .box {
+    padding: 5px 10px 25px 10px;
+}
+
+/* .wrapperDiv .box .topIcoDiv {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+} */
+
+.wrapperDiv {
+    position: relative;
+}
+
+.wrapperDiv:hover .box {
+    background: white;
+    filter: drop-shadow(0px 2px 12.3px rgba(0, 0, 0, 0.1));
+}
+
+/* ABOUT  */
+.abtSection {
+    margin-top: 300px;
+    color: #5E5B5B;
+}
+
+.aboutContainer {
+    gap: 150px;
+}
+
+.imageDiv {
+    position: relative;
+
+}
+
+.grayLeaf {
+    position: absolute;
+    right: -120px;
+    top: 0;
+    z-index: -1;
+}
+
+.scissorImg {
+    border: 11px solid white;
+}
+
+.flowerImg {
+    position: absolute;
+    left: 60px;
+    top: 40%;
+    z-index: -1;
+}
+
+.greenText {
+    color: #209D2F;
+    gap: 10px;
+}
+
+.leaf {
+    position: relative;
+    width: 24px;
+    animation: position 1s linear alternate infinite;
+}
+
+@keyframes position {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -3%;
+    }
+}
+
+.rightDiv h2 {
+    color: #222222;
+    font-size: 30px;
+}
+
+.rightDiv {
+    flex-direction: column;
+    gap: 25px;
+}
+
+.greenCircleDiv {
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 20px 0;
+}
+
+.circleDiv {
+    padding-right: 40px;
+
+}
+
+.circle {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background: #209D2F;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.circle i {
+    font-size: 30px;
+}
+
+.checkdedDiv {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 40px;
+    border-left: 1px solid #DDDDDD;
+}
+
+.checkdedDiv span {
+    padding-left: 10px;
+}
+
+.check i {
+    position: relative;
+    /* border: 2px solid white; */
+}
+
+.check i::after {
+    content: '';
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    border: 2px solid #5E5B5B;
+    border-radius: 50%;
+    left: -2px;
+    top: 1px;
+}
+
+.profileImg {
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    outline: 1px solid #209D2F;
+    outline-offset: 5px;
+}
+
+.signatureImg {
+    height: 36px;
+}
+
+.signatureDiv {
+    padding-left: 40px;
+
+}
+
+.profileDiv {
+    padding-right: 40px;
+    border-right: 1px solid #DDDDDD;
+}
+
+.profileDiv p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/************Services***********/
+.serviceSection {
+    margin-top: 180px;
+    padding: 120px 0;
+    /* height: 100vh; */
+    position: relative;
+}
+
+.bgImg {
+    background: url('https://bracketweb.com/garlon-laravel/assets/images/shapes/service-bg.png') no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.serviceSection .leafDiv {
+    justify-content: center;
+}
+
+.serviceSection .leafDiv img{
+    position: relative;
+     animation: serviceposition 1s linear alternate infinite;
+}
+@keyframes serviceposition {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 4%;
+    }
+}
+
+.serviceSection .leafDiv h4 {
+    color: #209D2F;
+    font-weight: 600;
+}
+
+.serviceSection h3 {
+    color: #222222;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    width: 450px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.serviceIcon i {
+    width: 111px;
+    height: 111px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2F2F2;
+    border: 7px solid #fff;
+    font-size: 50px;
+    color: #209D2F;
+    /* margin-bottom: 10px; */
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+}
+.serviceIcon i::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    background: #209D2F;
+    z-index: 999;
+    transition: all 0.5s ease-in-out;
+}
+
+.serviceContainer {
+    gap: 30px;
+    padding: 100px 0;
+}
+
+.serviceContainer .serviceBox {
+    background: white;
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+.serviceContainer .serviceBox:hover {
+    background: #000000;
+    color: white;
+}
+
+.serviceContainer .serviceBox:hover .serviceBoxText h4,
+.serviceContainer .serviceBox:hover .serviceBoxText p {
+    color: white;
+}
+
+.serviceContainer .serviceBox:hover .firstImg {
+    border: 2px solid white;
+}
+
+.serviceContainer .serviceBox:hover .secondServiceImg {
+    display: block;
+    width: 100%;
+}
+.serviceContainer .serviceBox:hover .serviceIcon i::after {
+    transform: translate(-50%,-50%) scale(1);
+}
+.serviceContainer .serviceBox:hover .serviceIcon i {
+   color: white;
+}
+.serviceImagebox{
+    position: relative;
+    overflow: hidden;
+}
+.serviceContainer .serviceBox .firstImg {
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+
+}
+
+.secondServiceImg {
+    /* display: none; */
+    position: absolute;
+    height: 100%;
+    width: 0;
+    left: 0;
+    bottom: 0;
+     border-radius: 10px;
+    /* z-index: 1000; */
+    /* border: 1px solid red; */
+    transition: 1s;
+}
+
+.serviceContainer .serviceBoxText h4 {
+    color: #222222;
+    padding: 0 10px 10px 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.serviceBoxText {
+    text-align: center;
+    padding: 0 25px 25px 25px;
+    /* background: red; */
+}
+
+.serviceContainer .serviceBoxText p {
+    line-height: 25px;
+    color: #5E5B5B;
+    font-size: 14px;
+    transition: all 0.5s ease-in-out;
+}
+
+.serviceContent {
+    margin-top: 60px;
+    position: relative;
+}
